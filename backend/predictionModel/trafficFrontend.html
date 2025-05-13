@@ -1,0 +1,249 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Congestion Predictor</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input:focus {
+            border-color: #007BFF;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .low-congestion {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .high-congestion {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .error {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Congestion Predictor</h1>
+        <label>Current Location:</label>
+        <input type="text" id="current_location" placeholder="Enter current location">
+
+        <label>Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination">
+
+        <label>Hour:</label>
+        <input type="number" id="hour" min="0" max="23" placeholder="Enter hour (0-23)">
+
+        <button onclick="predictTraffic()">Predict</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function predictTraffic() {
+            const current_location = document.getElementById("current_location").value;
+            const destination = document.getElementById("destination").value;
+            const hour = document.getElementById("hour").value;
+            const resultDiv = document.getElementById("result");
+
+            resultDiv.innerHTML = "Predicting...";
+            resultDiv.className = "";
+
+            fetch("http://127.0.0.1:5000/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ current_location, destination, hour })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.Error) {
+                    resultDiv.innerText = data.Error;
+                    resultDiv.className = "error";
+                } else if (data.Congestion === "High") {
+                    resultDiv.innerText = `Congestion: High 🚦\nSuggested Route: ${data.Suggested_Alternative_Route}`;
+                    resultDiv.className = "high-congestion";
+                } else {
+                    resultDiv.innerText = `Congestion: Low ✅\n${data.Suggested_Route}`;
+                    resultDiv.className = "low-congestion";
+                }
+            })
+            .catch(error => {
+                resultDiv.innerText = "Error: " + error;
+                resultDiv.className = "error";
+            });
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Congestion Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .high-congestion {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .low-congestion {
+            background-color: #28a745;
+            color: white;
+        }
+        .error {
+            background-color: #ffc107;
+            color: black;
+        }
+    </style>
+    <script>
+        function predictTraffic() {
+            const current_location = document.getElementById("current_location").value;
+            const destination = document.getElementById("destination").value;
+            const datetime = document.getElementById("datetime").value;
+            const resultDiv = document.getElementById("result");
+
+            resultDiv.innerHTML = "Predicting...";
+            resultDiv.className = "result";
+
+            fetch("http://localhost:5005/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ current_location, destination, datetime })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.Error) {
+                    resultDiv.innerText = data.Error;
+                    resultDiv.className = "result error";
+                } else if (data.Congestion === "High") {
+                    resultDiv.innerText = `🚦 High Congestion!\nSuggested Route: ${data.Suggested_Alternative_Route}`;
+                    resultDiv.className = "result high-congestion";
+                } else {
+                    resultDiv.innerText = `✅ Low Congestion\n${data.Suggested_Route}`;
+                    resultDiv.className = "result low-congestion";
+                }
+            })
+            .catch(error => {
+                resultDiv.innerText = "Error: " + error;
+                resultDiv.className = "result error";
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Congestion Predictor</h1>
+        <label>Current Location:</label>
+        <input type="text" id="current_location" placeholder="Enter current location">
+        <label>Destination:</label>
+        <input type="text" id="destination" placeholder="Enter destination">
+        <label>Date & Time:</label>
+        <input type="datetime-local" id="datetime">
+        <button onclick="predictTraffic()">Predict</button>
+        <div id="result" class="result"></div>
+    </div>
+</body>
+</html>

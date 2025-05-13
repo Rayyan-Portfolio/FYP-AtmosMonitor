@@ -1,0 +1,147 @@
+/* General styling for the container */
+.subscription-header {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.subscription-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: auto;
+}
+
+.plan-card:hover {
+  background: linear-gradient(145deg, #56ccf2, #6e7dff); /* Gradient on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.plan-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
+}
+
+.plan-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+.plan-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.plan-price h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.plan-duration {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+  font-size: 1rem;
+  color: #555;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+.feature-item span:first-child {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.feature-checked {
+  color: #4CAF50; /* Green check */
+}
+
+.feature-unchecked {
+  color: #F44336; /* Red cross */
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+}
+
+/* Back Button Styling */
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #007bff;
+  cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .subscription-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan-card {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}

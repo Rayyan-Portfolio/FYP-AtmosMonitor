@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AQI Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="width: 1280px; height: 725px;"></div>
+    <script>
+        // Initialize the map centered on Faisalabad
+        var map = L.map('map').setView([30.7628, 72.9297], 10);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Fetch AQI data from the JSON file
+        fetch('aqidata.json')
+            .then(response => response.json())
+            .then(data => {
+                // Loop through the features in the JSON
+                data.features.forEach(function(feature) {
+                    var aqi = feature.attributes.AQI;
+                    var coordinates = [feature.geometry.y, feature.geometry.x];
+
+                    // Add a circle marker for each point
+                    var circleMarker = L.circleMarker(coordinates, {
+                        radius: 8,
+                        fillColor: aqi > 224.890014 && aqi < 226.577790 ? 'yellow' : 'red',
+                        color: '#000',
+                        weight: 1,
+                        opacity: 0.01,
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    // Bind a tooltip showing the AQI value (shown on hover)
+                    circleMarker.bindTooltip('AQI: ' + aqi, { permanent: false, direction: 'top' });
+                    
+                    // Optionally, you can also keep the popup on click
+                    circleMarker.bindPopup('AQI: ' + aqi);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading the AQI data:', error);
+            });
+    </script>
+</body>
+</html>

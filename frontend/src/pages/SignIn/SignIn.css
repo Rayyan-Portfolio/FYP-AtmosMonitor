@@ -1,0 +1,146 @@
+/* SignIn.css */
+
+.signin-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  height: 100vh;
+  background-position: center;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #000000;
+  color: #fff;
+  z-index: 100;
+}
+
+.navbar-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar .nav-link {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.navbar .nav-link:hover {
+  text-decoration: underline;
+}
+
+.navbar-buttons .signup-btn {
+  color: #fff;
+  background-color: #0073e6;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 0.9em;
+  border-radius: 4px;
+}
+
+.signin-container {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px; /* Limit width for responsiveness */
+  background-color: #ffffff; /* White background for the container */
+  background-image: url('illustration.png'); /* Centered background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65% auto;
+  box-sizing: border-box;
+}
+
+.signin-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #142d63;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.signin-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signin-container input {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 2px;
+  border: 1px solid #000000;
+  font-size: 1rem;
+  opacity: 50%;
+}
+
+.signin-container button {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #0b68d1;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.signin-container p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.signup-link {
+  color: #3b88e0;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Forgot Password styling */
+.forgot-password {
+  margin-top: 1rem;
+}
+
+.forgot-password-link {
+  background: none;
+  border: none;
+  color: #0073e6;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+/* Background and Decorative Shapes */
+.signin-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}

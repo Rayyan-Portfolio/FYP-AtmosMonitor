@@ -1,0 +1,529 @@
+/* Dashboard container */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 14%;
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed; /* Keep sidebar fixed on the left */
+  height: 100vh; /* Full height */
+  top: 0; /* Make sure it sticks to the top */
+  left: 0; /* Make sure it sticks to the left */
+  overflow-y: auto; /* Enables scrolling */
+  z-index: 1000; 
+}
+
+.sidebar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.sidebar-links {
+  list-style: none;
+}
+
+.sidebar-links li {
+  margin: 10px 0;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 5px 0;
+  display: block;
+}
+
+.sidebar-links a:hover {
+  background-color: #155d3b;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Adjust height when in mobile view */
+    position: relative; /* Let it scroll with the content */
+  }
+}
+
+
+/* Notifications Section */
+.notifications {
+  width: 30%; /* Set the width of the notification section */
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: flex; /* Adjust the height */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+/* Notification grid */
+.notification-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column by default */
+  gap: 1rem;
+}
+
+.notification-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .notification-grid {
+    grid-template-columns: 1fr; /* 1 column for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .notification-grid {
+    grid-template-columns: 1fr; /* 1 column for smaller screens */
+  }
+
+  .notifications {
+    width: 100%; /* Full width for smaller screens */
+    height: auto;
+  }
+}
+
+
+
+/* Main content area */
+.main-content {
+  margin-left: 250px; /* Adjust content layout to the right */
+  padding: 2rem;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Sections styling */
+.stats
+{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow */
+}
+
+/* Section title styling */
+.stats h2{
+  margin-bottom: 1rem;
+}
+
+/* Info card styling */
+.info-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 10px; /* Increased border-radius for more rounded edges */
+  text-align: center;
+  text-decoration: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 1rem;
+  justify-items: center; /* Center the items */
+  margin-top: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .info-cards-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .info-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .info-cards-container {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
+}
+
+/* Button styling */
+.alert-buttons button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert-buttons button:hover {
+  background-color: #000000;
+}
+
+
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative; /* Sidebar will scroll with content */
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+
+
+/* Visualize Data Section Styling */
+#visual-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow */
+}
+
+/* Section title styling */
+#visual-data h2 {
+  
+  margin-bottom: 1rem;
+}
+
+/* Individual chart section styling */
+#pie-chart, #bar-chart, #heat-map, #stacked-bar {
+  margin: 20px 0;
+  padding: 1rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow */
+}
+
+/* Chart container for responsiveness */
+.chart-container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Info card styling inside chart sections */
+.chart-card {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 10px; /* Increased border-radius for more rounded edges */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gauge-chart {
+    /* margin: 20px 0; */
+    padding: 1rem;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  #visual-data {
+    flex-direction: column;
+  }
+
+  .chart-container {
+    height: 300px; /* Reduce height on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 250px; /* Further reduce height on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    height: 200px; /* Adjust height for very small screens */
+  }
+}
+
+/* Map Section Styling */
+.map-section {
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Border shadow */
+}
+
+/* Map container styling */
+.map-container {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .map-container {
+    height: 300px; /* Adjust height for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .map-section {
+    padding: 1rem; /* Reduce padding for very small screens */
+  }
+  .map-container {
+    height: 200px; /* Further adjust height for very small screens */
+  }
+}
+
+#Recommendation{
+    background-color: #ffffff;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 10px; /* Increased border-radius for more rounded edges */
+  text-align: center;
+  text-decoration: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Prediction {
+  width: 100%;
+  max-width: 600px;
+  margin:  20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Basic form layout */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-label {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.form-input {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form-button {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #40454a;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+}
+
+
+
+.traffic-predictor-container {
+  width: 100%;
+  max-width: 600px;
+  margin:  20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+  font-weight: bold;
+}
+
+.traffic-input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.traffic-predict-button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.traffic-predict-button:hover {
+  background-color: #40454a;
+}
+
+.traffic-result-box {
+  margin-top: 20px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.predicting {
+  background-color: #f0ad4e;
+  color: black;
+}
+
+.high-congestion {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.low-congestion {
+  background-color: #28a745;
+  color: white;
+}
+
+.error {
+  background-color: #ffc107;
+  color: black;
+}
+
+
+
+
+/* Health Impact Forecasting Styles */
+.health-impact {
+  width: 100%;
+  max-width: 600px;
+  margin:  20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.health-advice-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #f0c14b;
+}
+
+.advice-text h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+.traffic-alerts-form {
+  width: 100%;
+  max-width: 600px;
+  margin:  20px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.traffic-input-field{
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+
+
+
+
+/* Container for the Info Button */
+.info-button-container {
+  display: flex;
+  justify-content: flex-end;  /* Aligns the button to the far right */
+  margin-top: 20px;
+}
+
+/* Info Button Styling */
+.info-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-button:hover {
+  background-color: #545252;
+}

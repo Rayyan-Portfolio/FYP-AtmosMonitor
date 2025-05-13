@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .dropdown-container {
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            margin-bottom: 40px;
+        }
+        #chart1, #chart2, #chart3 {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-container">
+        <label for="locationDropdown">Select Location: </label>
+        <select id="locationDropdown"></select>
+    </div>
+
+    <div class="chart-container">
+        <div id="chart1"></div> <!-- PM2.5 and PM10 -->
+    </div>
+    <div class="chart-container">
+        <div id="chart2"></div> <!-- CO2 levels -->
+    </div>
+    <div class="chart-container">
+        <div id="chart3"></div> <!-- Temperature and Humidity -->
+    </div>
+
+    <script>
+        // Fetch data from the JSON file
+        let jsonData = [];
+        fetch('csvjson.json')
+            .then(response => response.json())
+            .then(data => {
+                jsonData = data;
+                initializeDashboard();
+            })
+            .catch(error => console.error('Error fetching data:', error));
+
+        function initializeDashboard() {
+            // Extract unique locations for the dropdown
+            const locations = [...new Set(jsonData.map(record => record.Location))];
+            const dropdown = document.getElementById('locationDropdown');
+
+            // Populate the dropdown
+            locations.forEach(location => {
+                const option = document.createElement('option');
+                option.value = location;
+                option.textContent = location;
+                dropdown.appendChild(option);
+            });
+
+            // Initialize charts with the first location
+            updateCharts(jsonData, locations[0]);
+
+            // Update charts when a new location is selected
+            dropdown.addEventListener('change', (event) => {
+                updateCharts(jsonData, event.target.value);
+            });
+        }
+
+        function updateCharts(data, selectedLocation) {
+            // Filter data for the selected location
+            const filteredData = data.filter(record => record.Location === selectedLocation);
+
+            // Extract data for the charts
+            const timeRange = filteredData.map(record => record.Date);
+            const pm25Data = filteredData.map(record => record["PM2.5"]);
+            const pm10Data = filteredData.map(record => record["PM10"]);
+            const co2Data = filteredData.map(record => record.CO2);
+            const tempData = filteredData.map(record => record.Temperature);
+            const humidData = filteredData.map(record => record.Humidity);
+
+            // PM2.5 and PM10 chart
+            const pm25Trace = {
+                x: timeRange,
+                y: pm25Data,
+                name: 'PM2.5',
+                type: 'scatter',
+                line: { color: '#1f77b4' }
+            };
+
+            const pm10Trace = {
+                x: timeRange,
+                y: pm10Data,
+                name: 'PM10',
+                type: 'scatter',
+                line: { color: '#ff7f0e' }
+            };
+
+            const layout1 = {
+                title: `PM2.5 and PM10 Levels - ${selectedLocation}`,
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'Concentration (μg/m³)' },
+                margin: { t: 50, l: 50, r: 50, b: 50 }
+            };
+
+            Plotly.newPlot('chart1', [pm25Trace, pm10Trace], layout1);
+
+            // CO2 levels chart
+            const co2Trace = {
+                x: timeRange,
+                y: co2Data,
+                name: 'CO2',
+                type: 'scatter',
+                line: { color: '#2ca02c' }
+            };
+
+            const layout2 = {
+                title: `CO2 Levels - ${selectedLocation}`,
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'CO2 Concentration (ppm)' },
+                margin: { t: 50, l: 50, r: 50, b: 50 }
+            };
+
+            Plotly.newPlot('chart2', [co2Trace], layout2);
+
+            // Temperature and Humidity trends chart
+            const tempTrace = {
+                x: timeRange,
+                y: tempData,
+                name: 'Temperature',
+                type: 'scatter',
+                line: { color: '#d62728' }
+            };
+
+            const humidTrace = {
+                x: timeRange,
+                y: humidData,
+                name: 'Humidity',
+                type: 'scatter',
+                line: { color: '#9467bd' }
+            };
+
+            const layout3 = {
+                title: `Temperature and Humidity Trends - ${selectedLocation}`,
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'Values' },
+                margin: { t: 50, l: 50, r: 50, b: 50 }
+            };
+
+            Plotly.newPlot('chart3', [tempTrace, humidTrace], layout3);
+        }
+    </script>
+</body>
+</html>

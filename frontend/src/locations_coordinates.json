@@ -1,0 +1,130 @@
+{
+  "Canal Road": {
+    "mean_coordinates": {
+      "longitude": 74.3587,
+      "latitude": 31.5497
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 74.356,
+        "max": 74.372
+      },
+      "latitude": {
+        "min": 31.54,
+        "max": 31.56
+      }
+    }
+  },
+  "Madina Town": {
+    "mean_coordinates": {
+      "longitude": 73.0717,
+      "latitude": 31.4436
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.065,
+        "max": 73.085
+      },
+      "latitude": {
+        "min": 31.44,
+        "max": 31.45
+      }
+    }
+  },
+  "D Ground": {
+    "mean_coordinates": {
+      "longitude": 73.0728,
+      "latitude": 31.4092
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.07,
+        "max": 73.075
+      },
+      "latitude": {
+        "min": 31.406,
+        "max": 31.412
+      }
+    }
+  },
+  "Clock Tower": {
+    "mean_coordinates": {
+      "longitude": 73.0782,
+      "latitude": 31.4145
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.075,
+        "max": 73.08
+      },
+      "latitude": {
+        "min": 31.41,
+        "max": 31.42
+      }
+    }
+  },
+  "Kohinoor City": {
+    "mean_coordinates": {
+      "longitude": 73.0734,
+      "latitude": 31.4795
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.07,
+        "max": 73.078
+      },
+      "latitude": {
+        "min": 31.475,
+        "max": 31.485
+      }
+    }
+  },
+  "People's Colony": {
+    "mean_coordinates": {
+      "longitude": 73.0706,
+      "latitude": 31.4616
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.065,
+        "max": 73.075
+      },
+      "latitude": {
+        "min": 31.455,
+        "max": 31.465
+      }
+    }
+  },
+  "Susan Road": {
+    "mean_coordinates": {
+      "longitude": 73.0534,
+      "latitude": 31.45
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.05,
+        "max": 73.06
+      },
+      "latitude": {
+        "min": 31.445,
+        "max": 31.455
+      }
+    }
+  },
+  "Ghulam Muhammad Abad": {
+    "mean_coordinates": {
+      "longitude": 73.0709,
+      "latitude": 31.4094
+    },
+    "coordinate_range": {
+      "longitude": {
+        "min": 73.065,
+        "max": 73.075
+      },
+      "latitude": {
+        "min": 31.405,
+        "max": 31.415
+      }
+    }
+  }
+}

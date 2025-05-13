@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@stripe/react-stripe-js": "^3.4.0",
+    "@stripe/stripe-js": "^6.0.0",
+    "axios": "^1.7.9",
+    "bcryptjs": "^3.0.2",
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.7",
+    "leaflet": "^1.9.4",
+    "leaflet.heat": "^0.2.0",
+    "lucide-react": "^0.509.0",
+    "plotly.js": "^3.0.1",
+    "react-gauge-chart": "^0.5.1",
+    "react-plotly.js": "^2.6.0",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "^5.0.1",
+    "recharts": "^2.14.1",
+    "web-vitals": "^4.2.4",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "name": "atmosmonitor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && npm start",
+    "atmos": "concurrently \"npm run frontend\" \"npm run backend\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "react-app-rewired": "^2.2.1",
+    "source-map-loader": "^5.0.0"
+  }
+}

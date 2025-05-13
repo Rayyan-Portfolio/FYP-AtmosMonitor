@@ -1,0 +1,330 @@
+{
+    "Canal Road": [
+        {
+            "Timestamp": "2023-11-25 00:00:00",
+            "Latitude": 31.45,
+            "Longitude": 73.12,
+            "Location": "Canal Road",
+            "Vehicle_Count": 438,
+            "NO2_Emissions": 93.51,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 63,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.45&lon=73.12"
+        },
+        {
+            "Timestamp": "2023-11-12 00:00:00",
+            "Latitude": 31.45,
+            "Longitude": 73.12,
+            "Location": "Canal Road",
+            "Vehicle_Count": 411,
+            "NO2_Emissions": 39.51,
+            "Weather_Conditions": "Cloudy",
+            "Traffic_Flow_Speed": 49,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.45&lon=73.12"
+        },
+        {
+            "Timestamp": "2023-07-22 00:00:00",
+            "Latitude": 31.45,
+            "Longitude": 73.12,
+            "Location": "Canal Road",
+            "Vehicle_Count": 158,
+            "NO2_Emissions": 80.31,
+            "Weather_Conditions": "Hazy",
+            "Traffic_Flow_Speed": 68,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.45&lon=73.12"
+        }
+    ],
+    "Ghulam Muhammad Abad": [
+        {
+            "Timestamp": "2023-01-02 00:00:00",
+            "Latitude": 31.43,
+            "Longitude": 73.08,
+            "Location": "Ghulam Muhammad Abad",
+            "Vehicle_Count": 340,
+            "NO2_Emissions": 61.63,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 78,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Delay travel",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.43&lon=73.08"
+        },
+        {
+            "Timestamp": "2023-09-23 00:00:00",
+            "Latitude": 31.43,
+            "Longitude": 73.08,
+            "Location": "Ghulam Muhammad Abad",
+            "Vehicle_Count": 324,
+            "NO2_Emissions": 50.26,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 30,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.43&lon=73.08"
+        }
+    ],
+    "Susan Road": [
+        {
+            "Timestamp": "2023-03-06 00:00:00",
+            "Latitude": 31.42,
+            "Longitude": 73.1,
+            "Location": "Susan Road",
+            "Vehicle_Count": 117,
+            "NO2_Emissions": 30.77,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 28,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.42&lon=73.1"
+        },
+        {
+            "Timestamp": "2023-10-29 00:00:00",
+            "Latitude": 31.42,
+            "Longitude": 73.1,
+            "Location": "Susan Road",
+            "Vehicle_Count": 13,
+            "NO2_Emissions": 32.27,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 13,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Use alternate road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.42&lon=73.1"
+        },
+        {
+            "Timestamp": "2023-03-17 00:00:00",
+            "Latitude": 31.42,
+            "Longitude": 73.1,
+            "Location": "Susan Road",
+            "Vehicle_Count": 225,
+            "NO2_Emissions": 143.81,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 74,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.42&lon=73.1"
+        }
+    ],
+    "People's Colony": [
+        {
+            "Timestamp": "2023-05-03 00:00:00",
+            "Latitude": 31.415,
+            "Longitude": 73.11,
+            "Location": "People's Colony",
+            "Vehicle_Count": 76,
+            "NO2_Emissions": 64.03,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 79,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Delay travel",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.415&lon=73.11"
+        },
+        {
+            "Timestamp": "2023-07-16 00:00:00",
+            "Latitude": 31.415,
+            "Longitude": 73.11,
+            "Location": "People's Colony",
+            "Vehicle_Count": 407,
+            "NO2_Emissions": 45.27,
+            "Weather_Conditions": "Rainy",
+            "Traffic_Flow_Speed": 77,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.415&lon=73.11"
+        },
+        {
+            "Timestamp": "2023-08-21 00:00:00",
+            "Latitude": 31.415,
+            "Longitude": 73.11,
+            "Location": "People's Colony",
+            "Vehicle_Count": 154,
+            "NO2_Emissions": 114.46,
+            "Weather_Conditions": "Rainy",
+            "Traffic_Flow_Speed": 56,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.415&lon=73.11"
+        }
+    ],
+    "Kohinoor City": [
+        {
+            "Timestamp": "2023-04-30 00:00:00",
+            "Latitude": 31.432,
+            "Longitude": 73.085,
+            "Location": "Kohinoor City",
+            "Vehicle_Count": 155,
+            "NO2_Emissions": 75.53,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 15,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Use alternate road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.432&lon=73.085"
+        },
+        {
+            "Timestamp": "2023-03-25 00:00:00",
+            "Latitude": 31.432,
+            "Longitude": 73.085,
+            "Location": "Kohinoor City",
+            "Vehicle_Count": 114,
+            "NO2_Emissions": 37.94,
+            "Weather_Conditions": "Cloudy",
+            "Traffic_Flow_Speed": 70,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.432&lon=73.085"
+        },
+        {
+            "Timestamp": "2023-09-08 00:00:00",
+            "Latitude": 31.432,
+            "Longitude": 73.085,
+            "Location": "Kohinoor City",
+            "Vehicle_Count": 113,
+            "NO2_Emissions": 83.37,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 63,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Use alternate road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.432&lon=73.085"
+        }
+    ],
+    "Clock Tower": [
+        {
+            "Timestamp": "2023-07-20 00:00:00",
+            "Latitude": 31.418,
+            "Longitude": 73.072,
+            "Location": "Clock Tower",
+            "Vehicle_Count": 382,
+            "NO2_Emissions": 25.05,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 42,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.418&lon=73.072"
+        },
+        {
+            "Timestamp": "2023-07-17 00:00:00",
+            "Latitude": 31.418,
+            "Longitude": 73.072,
+            "Location": "Clock Tower",
+            "Vehicle_Count": 235,
+            "NO2_Emissions": 16.54,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 61,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Delay travel",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.418&lon=73.072"
+        },
+        {
+            "Timestamp": "2023-10-02 00:00:00",
+            "Latitude": 31.418,
+            "Longitude": 73.072,
+            "Location": "Clock Tower",
+            "Vehicle_Count": 232,
+            "NO2_Emissions": 80.35,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 68,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Avoid main road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.418&lon=73.072"
+        },
+        {
+            "Timestamp": "2023-04-27 00:00:00",
+            "Latitude": 31.418,
+            "Longitude": 73.072,
+            "Location": "Clock Tower",
+            "Vehicle_Count": 143,
+            "NO2_Emissions": 99.02,
+            "Weather_Conditions": "Clear",
+            "Traffic_Flow_Speed": 67,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Delay travel",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.418&lon=73.072"
+        },
+        {
+            "Timestamp": "2023-10-22 00:00:00",
+            "Latitude": 31.418,
+            "Longitude": 73.072,
+            "Location": "Clock Tower",
+            "Vehicle_Count": 160,
+            "NO2_Emissions": 42.13,
+            "Weather_Conditions": "Hazy",
+            "Traffic_Flow_Speed": 69,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.418&lon=73.072"
+        }
+    ],
+    "D Ground": [
+        {
+            "Timestamp": "2023-05-06 00:00:00",
+            "Latitude": 31.425,
+            "Longitude": 73.115,
+            "Location": "D Ground",
+            "Vehicle_Count": 406,
+            "NO2_Emissions": 23.81,
+            "Weather_Conditions": "Foggy",
+            "Traffic_Flow_Speed": 27,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.425&lon=73.115"
+        },
+        {
+            "Timestamp": "2023-03-10 00:00:00",
+            "Latitude": 31.425,
+            "Longitude": 73.115,
+            "Location": "D Ground",
+            "Vehicle_Count": 154,
+            "NO2_Emissions": 22.27,
+            "Weather_Conditions": "Rainy",
+            "Traffic_Flow_Speed": 24,
+            "Rush_Hour_Indicator": "Yes",
+            "Suggested_Route_Adjustment": "Use alternate road",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.425&lon=73.115"
+        },
+        {
+            "Timestamp": "2023-04-04 00:00:00",
+            "Latitude": 31.425,
+            "Longitude": 73.115,
+            "Location": "D Ground",
+            "Vehicle_Count": 426,
+            "NO2_Emissions": 42.11,
+            "Weather_Conditions": "Cloudy",
+            "Traffic_Flow_Speed": 29,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.425&lon=73.115"
+        }
+    ],
+    "Madina Town": [
+        {
+            "Timestamp": "2023-06-03 00:00:00",
+            "Latitude": 31.44,
+            "Longitude": 73.13,
+            "Location": "Madina Town",
+            "Vehicle_Count": 145,
+            "NO2_Emissions": 123.83,
+            "Weather_Conditions": "Cloudy",
+            "Traffic_Flow_Speed": 55,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "Delay travel",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.44&lon=73.13"
+        },
+        {
+            "Timestamp": "2023-01-26 00:00:00",
+            "Latitude": 31.44,
+            "Longitude": 73.13,
+            "Location": "Madina Town",
+            "Vehicle_Count": 482,
+            "NO2_Emissions": 125.72,
+            "Weather_Conditions": "Cloudy",
+            "Traffic_Flow_Speed": 13,
+            "Rush_Hour_Indicator": "No",
+            "Suggested_Route_Adjustment": "None",
+            "Waze_API_URL": "https://www.waze.com/live-map/api/georss?env=row&types=alerts&lat=31.44&lon=73.13"
+        }
+    ]
+}
